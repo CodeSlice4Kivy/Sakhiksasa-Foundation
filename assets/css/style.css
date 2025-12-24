@@ -25,7 +25,7 @@
 
 .logo {
   
-  height: 100px;
+  height: 70px;
   width: auto;
   background-color: #d9f3f6;
   border-radius: 8px;
@@ -71,6 +71,52 @@ section {
 .container {
   max-width: 1200px;
   margin: auto;
+}
+
+/* ===== Header Responsive Menu ===== */
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #ffffff;
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+    z-index: 1000;
+  }
+
+  .nav-links a {
+    padding: 12px 10px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
 }
 
 
